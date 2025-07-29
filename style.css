@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --brand-color: hsl(47, 88%, 63%);
+    --card-background: hsl(0, 0%, 100%);
+    --text-color: hsl(0, 0%, 42%);
+    --heading-color: hsl(0, 0%, 7%);
+    --black: hsl(0, 0%, 0%);
+    --paragraph-size: 16px;
+    --bolder-text: 800;
+    --plain-text: 500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Figtree", sans-serif;
+}
+
+body {
+    background-color: var(--brand-color);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    background-color: var(--card-background);
+    border: 1px solid var(--heading-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 375px;
+    height: auto;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    right: -9px;
+    bottom: -10px;
+    border-right: 12px solid var(--black);
+    border-bottom: 12px solid var(--black);
+    border-radius: 27px;
+    z-index: -1;
+}
+
+.container img {
+    border-radius: 12px;
+}
+
+.pub-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pub-details .learning {
+    color: var(--heading-color);
+    font-size: 13px;
+    background-color: var(--brand-color);
+    padding: 6px 12px;
+    border-radius: 5px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.pub-details p {
+    font-size: var(--paragraph-size);
+    font-weight: var(--plain-text);
+    color: var(--heading-color);
+}
+
+.heading-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.heading-desc h2 {
+    font-weight: var(--bolder-text);
+    color: var(--heading-color);
+}
+
+.heading-desc p {
+    font-weight: var(--plain-text);
+    color: var(--text-color);
+    line-height: 25px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-profile img {
+    width: 35px;
+}
+
+.user-profile h4 {
+    color: var(--heading-color);
+    font-weight: var(--bolder-text);
+}
